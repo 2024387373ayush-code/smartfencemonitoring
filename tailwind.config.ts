@@ -57,6 +57,26 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        success: {
+          DEFAULT: "hsl(var(--success))",
+          foreground: "hsl(var(--success-foreground))",
+        },
+        warning: {
+          DEFAULT: "hsl(var(--warning))",
+          foreground: "hsl(var(--warning-foreground))",
+        },
+        info: {
+          DEFAULT: "hsl(var(--info))",
+          foreground: "hsl(var(--info-foreground))",
+        },
+        status: {
+          online: "hsl(var(--status-online))",
+          offline: "hsl(var(--status-offline))",
+          charging: "hsl(var(--status-charging))",
+          "battery-good": "hsl(var(--status-battery-good))",
+          "battery-warning": "hsl(var(--status-battery-warning))",
+          "battery-critical": "hsl(var(--status-battery-critical))",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",
