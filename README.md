@@ -1,73 +1,90 @@
-# Welcome to your Lovable project
+⚡ Smart Fence Monitoring Dashboard
 
-## Project info
+A responsive monitoring dashboard for the Smart Electric Fence System, built with React and dummy IoT data.
+This MVP demonstrates real-time monitoring of fence status, solar panel charging, battery health, current/voltage readings, and tamper alerts.
 
-**URL**: https://lovable.dev/projects/b6e0deb0-7b3e-4178-bc24-75bfc3b1feec
+🚀 Features
 
-## How can I edit this code?
+Fence Control: Toggle ON/OFF with live status indicator (🟢 ON / 🔴 OFF).
 
-There are several ways of editing your application.
+Battery Monitoring: Battery % and voltage shown with a progress bar.
 
-**Use Lovable**
+Solar Panel Monitoring: Charging / Not Charging status.
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/b6e0deb0-7b3e-4178-bc24-75bfc3b1feec) and start prompting.
+Current & Voltage: Dummy chart simulating real-time readings.
 
-Changes made via Lovable will be committed automatically to this repo.
+Alerts: Displays tamper/alert notifications.
 
-**Use your preferred IDE**
+History Logs: Table with previous events (Date | Event | Current | Voltage | Fence Status | Tamper Status).
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+🛠️ Tech Stack
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+Frontend: React (Lovable generated UI, customized for responsiveness).
 
-Follow these steps:
+Backend (optional): Node.js/Express for future integration with hardware.
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+Database (optional): Firebase / MongoDB for storing live sensor data.
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+Communication: MQTT/HTTP (to be connected with ESP32/Arduino hardware).
 
-# Step 3: Install the necessary dependencies.
-npm i
+📂 Project Structure
+smart-fence-dashboard/
+ ├── src/
+ │   ├── components/     # UI components (cards, charts, tables)
+ │   ├── pages/          # Dashboard and navigation pages
+ │   ├── assets/         # Images/icons if any
+ │   └── App.js          # Main app entry
+ ├── public/             # Static files
+ ├── package.json        # Dependencies
+ └── README.md           # Project info
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+🖥️ Running Locally
 
-**Edit a file directly in GitHub**
+Clone the repo:
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+git clone https://github.com/your-username/smart-fence-dashboard.git
+cd smart-fence-dashboard
 
-**Use GitHub Codespaces**
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+Install dependencies:
 
-## What technologies are used for this project?
+npm install
 
-This project is built with:
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+Start development server:
 
-## How can I deploy this project?
+npm start
 
-Simply open [Lovable](https://lovable.dev/projects/b6e0deb0-7b3e-4178-bc24-75bfc3b1feec) and click on Share -> Publish.
 
-## Can I connect a custom domain to my Lovable project?
+Then open http://localhost:3000
+ in your browser.
 
-Yes, you can!
+📊 Dummy Data (for MVP Demo)
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+Battery: 78% (12.4V)
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+Solar Panel: Charging ✅
+
+Fence Status: ON
+
+Current/Voltage: ~2.1A, ~12.5V (dummy chart data)
+
+History Example:
+
+2025-09-24 | Fence ON | 2.1A | 12.5V | ON | No Tamper
+
+2025-09-23 | Fence OFF | 0.0A | 12.3V | OFF | Tamper Detected
+
+🌱 Future Enhancements
+
+Connect real IoT hardware (ESP32 + sensors).
+
+Add mobile app version for farmers/security staff.
+
+Enable SMS/email alerts for tamper events.
+
+Multi-farm dashboard with multiple fence units.
+
+📜 License
+
+This project is for Smart India Hackathon 2025 – Surya Drishti Team (HW1019).
